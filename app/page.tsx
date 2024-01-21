@@ -7,8 +7,7 @@ import styles from './page.module.css';
 const DirectoryPage = async () => {
 
   const { results, seed } = await api.getRandomUsers();
-  console.log('directorypage results: ', results);
-  console.log('directorypage info: ', seed);
+
   return (
     <>
       <main className={styles.directoryGrid}>
@@ -19,7 +18,7 @@ const DirectoryPage = async () => {
                 <Person
                   id={person.login.uuid}
                   first={person.name.first}
-                  last={person.name.first}
+                  last={person.name.last}
                   age={person.dob.age}
                   city={person.location.city}
                   image={person.picture.large}

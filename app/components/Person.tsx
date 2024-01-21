@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './person.module.css';
 
-const Person = ({ image, id, first, last, age, street, number, city, state, country, postcode, email, phone, dob }: any) => {
+const Person = ({ image, id, first, last, age, streetName, streetNumber, city, state, country, postcode, email, phone, dob }: any) => {
 
   return (
 
@@ -26,7 +26,7 @@ const Person = ({ image, id, first, last, age, street, number, city, state, coun
 
 
       <footer className={styles.footer}>
-        {street && number ? <div>{number} {street} <br />{city}, {state} {postcode} <br /> {country} </div> : <div>City: {city}</div>}
+        {streetNumber & streetName ? <div>{streetNumber} {streetName} <br />{city}, {state} {postcode} <br /> {country} </div> : <div>City: {city}</div>}
 
         {email ? <div>Email: {email}</div> : null}
 
