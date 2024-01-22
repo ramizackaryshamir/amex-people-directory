@@ -1,23 +1,14 @@
 .personContainer{
   display: flex;
   flex-direction: column;
-  height: fit-content;
-  width: fit-content;
-  min-width: 360px;
-  color: #FFFFFF;
-  background-color: #002663;
-}
-
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding: 10px 7px 10px 0;
-}
-
-.footer {
-  display: flex;
-  flex-direction: row;
   justify-content: flex-start;
-  padding: 10px 0 7px 5px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1em;
+  color: #FFFFFF;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
 }

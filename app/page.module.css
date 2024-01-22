@@ -1,7 +1,17 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+  background-color: #002663;
+}
+
+
 .directoryGrid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-gap: 3px;
-max-width: fit-content;
-background-color:#9BD4F5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  background-color: #002663;
 }

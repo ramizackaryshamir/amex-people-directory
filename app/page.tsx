@@ -10,24 +10,30 @@ const DirectoryPage = async () => {
 
   return (
     <>
-      <main className={styles.directoryGrid}>
-        {results.map((person: any) => {
-          return (
-            <section key={person.login.uuid}>
-              <Link href={`/${person.login.uuid}`}>
-                <Person
-                  id={person.login.uuid}
-                  first={person.name.first}
-                  last={person.name.last}
-                  age={person.dob.age}
-                  city={person.location.city}
-                  image={person.picture.large}
-                />
-              </Link >
-            </section>
-          );
-        })}
-      </main >
+
+      <main className={styles.pageContainer}>
+        <article className={styles.directoryGrid}>
+          {results.map((person: any) => {
+            return (
+              <section key={person.login.uuid}>
+                <Link href={`/${person.login.uuid}`}>
+                  <Person
+                    id={person.login.uuid}
+                    first={person.name.first}
+                    last={person.name.last}
+                    age={person.dob.age}
+                    city={person.location.city}
+                    image={person.picture.large}
+                    imgWidth={180}
+                    imgHeight={180}
+                  />
+                </Link >
+              </section>
+            );
+          })}
+        </article>
+      </main>
+
     </>
   );
 };

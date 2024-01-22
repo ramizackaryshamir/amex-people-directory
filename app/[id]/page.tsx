@@ -1,7 +1,7 @@
 import React from 'react';
 import Person from '../components/Person';
 import { api } from '@/app/lib/api';
-import styles from '../page.module.css';
+import styles from './page.module.css';
 
 
 const PersonDetailsPage = async ({ params: { id } }: any) => {
@@ -13,10 +13,9 @@ const PersonDetailsPage = async ({ params: { id } }: any) => {
       {persons.results
         .filter(((person: any) => id === person.login.uuid))
         .map((person: any) => {
-          console.log(person);
           return (
             <>
-              <article key={person.login.uuid} className={styles.personContainer}>
+              <article className={styles.pageContainer} key={person.login.uuid} >
                 <Person
                   id={person.login.uuid}
                   first={person.name.first}
@@ -32,7 +31,9 @@ const PersonDetailsPage = async ({ params: { id } }: any) => {
                   phone={person.phone}
                   dob={person.dob.date}
                   image={person.picture.large}
-                /> 
+                  imgHeight={360}
+                  imgWidth={360}
+                />
               </article >
             </>
           );
