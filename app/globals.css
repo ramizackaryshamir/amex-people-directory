@@ -1,23 +1,14 @@
-html {
+* {
   box-sizing: border-box;
-   height: 100%;
-  width: 100vw;
-  margin: 0px;
+  color: #FFFFFF;
   background-color: #002663;
 }
 
+html {
+  height: 100%;
+  width: 100vw;
+}
+
 a {
-text-decoration: none;
-}
-
-.amexMidnightBlue {
-color: #002663;
-}
-
-.amexLightBlue {
-color: #9BD4F5;
-}
-
-.amexAbbey {
-color: #4d4f53;
+  text-decoration: none;
 }

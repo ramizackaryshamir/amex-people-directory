@@ -1,14 +1,22 @@
 import React from 'react';
 import Image from 'next/image';
 import { formatDate } from '../lib/utis';
-import styles from './person.module.css';
 
 const Person = ({ image, imgWidth, imgHeight, id, first, last, age, streetName, streetNumber, city, state, country, postcode, email, phone, dob }: any) => {
 
   return (
-    <article className={styles.personContainer} key={`${id}`}>
-      <header className={styles.header}>
-        <Image src={image} alt={`Profile picture for ${first} ${last} from ${city}. ${first} is ${age} years old.`}
+    <article style={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      width: 'fit-content',
+      height: 'fit-content',
+    }} key={`${id}`}>
+      <header>
+        <Image
+          src={image}
+          alt={`Profile picture for ${first} ${last} from ${city}. ${first} is ${age} years old.`}
+          priority
           height={imgHeight}
           width={imgWidth}
           style={{
@@ -22,14 +30,18 @@ const Person = ({ image, imgWidth, imgHeight, id, first, last, age, streetName, 
       </header>
 
       {streetNumber || streetName ?
-        <section className={styles.address}>
-          <div>{streetNumber} {streetName}</div>
-          <div>{city}, {state} {postcode}</div>
-          <div>{country}</div>
+        <section style={{
+          display: 'flex',
+          flexDirection: 'column',
+        }}>
+          <div style={{ color: '#9BD4F5' }}>{streetNumber} {streetName}</div>
+          <div style={{ color: '#9BD4F5' }}>{city}, {state} {postcode}</div>
+          <div style={{ color: '#9BD4F5' }}>{country}</div>
         </section>
         :
         <section>{city}</section>}
-      <footer className={styles.footer}>
+
+      <footer style={{ margin: '10px 0px' }}>
         {email ?
           <section>e: {email}</section>
           :
