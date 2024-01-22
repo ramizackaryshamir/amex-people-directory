@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Person from './components/Person';
 import { api } from './lib/api';
+import { PersonResponseObject } from './types';
 
 const DirectoryPage = async () => {
 
