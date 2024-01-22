@@ -2,10 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import Person from './components/Person';
 import { api } from './lib/api';
+import { PersonResponseObject } from './types';
 
 const DirectoryPage = async () => {
 
-  const { results, seed } = await api.getRandomUsers();
+  const { results } = await api.getRandomUsers();
 
   return (
     <>
@@ -25,17 +26,17 @@ const DirectoryPage = async () => {
           placeItems: 'center',
         }} >
           {
-            results.map((person: any) => {
+            results.map((person: PersonResponseObject) => {
               return (
                 <section key={person.login.uuid}>
                   <Link href={`/${person.login.uuid}`}>
                     <Person
-                      id={person.login.uuid}
+                      uuid={person.login.uuid}
                       first={person.name.first}
                       last={person.name.last}
                       age={person.dob.age}
                       city={person.location.city}
-                      image={person.picture.large}
+                      large={person.picture.large}
                       imgWidth={180}
                       imgHeight={180}
                     />

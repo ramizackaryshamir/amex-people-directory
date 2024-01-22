@@ -1,8 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { formatDate } from '../lib/utis';
+import { PersonProps } from '../types';
 
-const Person = ({ image, imgWidth, imgHeight, id, first, last, age, streetName, streetNumber, city, state, country, postcode, email, phone, dob }: any) => {
+const Person = ({ large, imgWidth, imgHeight, uuid, first, last, age, streetName, streetNumber, city, state, country, postcode, email, phone, dob }: PersonProps) => {
 
   return (
     <article style={{
@@ -11,10 +12,10 @@ const Person = ({ image, imgWidth, imgHeight, id, first, last, age, streetName, 
       justifyContent: 'flex-start',
       width: 'fit-content',
       height: 'fit-content',
-    }} key={`${id}`}>
+    }} key={`${uuid}`}>
       <header>
         <Image
-          src={image}
+          src={large}
           alt={`Profile picture for ${first} ${last} from ${city}. ${first} is ${age} years old.`}
           priority
           height={imgHeight}
