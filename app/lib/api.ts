@@ -1,6 +1,7 @@
 const host = 'https://randomuser.me'
-export const api = {
 
+export const api = {
+  
   getRandomUsers: async () => {
     const response = await fetch(`${host}/api/?results=10`, {
       method: 'GET',
@@ -12,7 +13,7 @@ export const api = {
     const data = await response.json();
     const results = data.results
     const seed = data.info.seed
+
   return {results, seed};
   }
-
 }
