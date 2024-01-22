@@ -10,7 +10,6 @@ const DirectoryPage = async () => {
 
   return (
     <>
-
       <main className={styles.pageContainer}>
         <article className={styles.directoryGrid}>
           {results.map((person: any) => {

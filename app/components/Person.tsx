@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { formatDate } from '../lib/utis';
 import styles from './person.module.css';
 
 const Person = ({ image, imgWidth, imgHeight, id, first, last, age, streetName, streetNumber, city, state, country, postcode, email, phone, dob }: any) => {
@@ -38,7 +39,7 @@ const Person = ({ image, imgWidth, imgHeight, id, first, last, age, streetName, 
           :
           null}
         {dob ?
-          <section style={{ color: '#9BD4F5' }}>birthday: {dob}</section>
+          <section style={{ color: '#9BD4F5' }}>birthday: {formatDate(dob)}</section>
           :
           null}
 
