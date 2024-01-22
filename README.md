@@ -11,4 +11,4 @@ https://github.com/MeetYourCreator/amex-people-directory/assets/57572988/938a958
 ## LightHouse Scores for Desktop and Mobile 
 
 <img width="1728" alt="Lighthouse-Desktop_score" src="https://github.com/MeetYourCreator/amex-people-directory/assets/57572988/f6801260-5cf2-4f57-8285-f7323d2d4df7">
-<img width="1728" alt="Lighthouse-Mobile_score" src="https://github.com/MeetYourCreator/amex-people-directory/assets/57572988/caee5fb6-fc99-4e8d-a9f4-50d336c49ef7">
+<img width="1728" alt="Lighthouse-Mobile_score" src="https://github.com/MeetYourCreator/amex-people-directory/assets/57572988/fd68f3fe-17f4-424e-ac96-b91923334b48">
