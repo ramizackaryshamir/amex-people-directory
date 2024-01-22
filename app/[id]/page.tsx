@@ -3,7 +3,6 @@ import Person from '../components/Person';
 import { api } from '@/app/lib/api';
 import styles from './page.module.css';
 
-
 const PersonDetailsPage = async ({ params: { id } }: any) => {
 
   const persons = await api.getRandomUsers();

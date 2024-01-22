@@ -8,10 +8,11 @@
   background-color: #002663;
 }
 
-
 .directoryGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 2px;
   place-items: center;
   background-color: #002663;
 }

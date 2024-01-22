@@ -14,36 +14,34 @@ const Person = ({ image, imgWidth, imgHeight, id, first, last, age, streetName, 
             objectFit: "cover",
             borderRadius: '5%',
             mixBlendMode: 'exclusion',
-            padding: '0px 5px 0px 5px'
           }} />
-        <section>
+        <section style={{ margin: '5px 0 0 0' }}>
           {first} {last}, {age}
         </section>
       </header>
 
-
-
+      {streetNumber || streetName ?
+        <section className={styles.address}>
+          <div>{streetNumber} {streetName}</div>
+          <div>{city}, {state} {postcode}</div>
+          <div>{country}</div>
+        </section>
+        :
+        <section>{city}</section>}
       <footer className={styles.footer}>
-        {streetNumber || streetName ?
-          <section className={styles.address}>
-            <div>{streetNumber} {streetName}</div>
-            <div>{city}, {state} {postcode}</div>
-            <div>{country}</div>
-          </section>
-          :
-          <section>{city}</section>}
         {email ?
-          <section>Email: {email}</section>
-          :
-          null}
-        {dob ?
-          <section>DOB: {dob}</section>
+          <section>e: {email}</section>
           :
           null}
         {phone
-          ? <section>Phone #:{phone}</section>
+          ? <section>p: {phone}</section>
           :
           null}
+        {dob ?
+          <section style={{ color: '#9BD4F5' }}>birthday: {dob}</section>
+          :
+          null}
+
       </footer>
 
     </article >

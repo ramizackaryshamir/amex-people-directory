@@ -8,7 +8,12 @@
   color: #FFFFFF;
 }
 
+.footer { 
+  margin: 10px 0px;
+}
+
 .address {
   display: flex;
   flex-direction: column;
+  color: #9BD4F5;
 }
