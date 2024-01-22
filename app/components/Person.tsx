@@ -19,7 +19,6 @@ const Person = ({ large, imgWidth, imgHeight, uuid, first, last, age, city, stre
         <Image
           src={large}
           alt={`Profile picture for ${first} ${last} from ${city}. ${first} is ${age} years old.`}
-          priority
           height={imgHeight}
           width={imgWidth}
           style={{
